@@ -20,7 +20,7 @@ Check out my **coding portfolio**: [primelj.dev](https://primelj.dev)
 
 ## 🧠 About Me
 
-I also share what I’m learning + building here:
+Check out my Instagram!
 
 - 📸 [Instagram](https://instagram.com/primel_jayawardana_)
 
