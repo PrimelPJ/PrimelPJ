@@ -4,7 +4,7 @@
 
 ## 🪐 About Me:
 
-I’m a University of Calgary student interested in software engineering, fintech, and building clean, useful products. I enjoy learning by building—whether that’s apps, APIs, or research-heavy projects.
+I’m a University of Calgary student interested in software engineering, fintech, and building clean, useful products. I enjoy learning by building, whether that’s apps, APIs, or research-heavy projects.
 
 ---
 
