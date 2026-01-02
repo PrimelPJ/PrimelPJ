@@ -59,6 +59,8 @@ Check out my Instagram!
 ![Swift](https://img.shields.io/badge/Swift-111111?style=for-the-badge&logo=swift)
 
 ### Developer Tools:
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-111111?style=for-the-badge&logo=intellijidea)
+![VS Code](https://img.shields.io/badge/VS%20Code-111111?style=for-the-badge&logo=visualstudiocode)
 ![Xcode](https://img.shields.io/badge/Xcode-111111?style=for-the-badge&logo=xcode)
 ![Postman](https://img.shields.io/badge/Postman-111111?style=for-the-badge&logo=postman)
 ![PowerBI](https://img.shields.io/badge/Power%20BI-111111?style=for-the-badge&logo=powerbi)
