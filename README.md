@@ -31,7 +31,7 @@ Previously at **TechHive Advisory** doing business development and compliance co
 | [**Gym**](https://github.com/PrimelPJ/Gym) | Minimal iOS workout tracker. 3-tab layout, streak tracking, volume and session stats, dark mode | Swift, SwiftUI, Core Data |
 | [**GRC Vendor Risk Tool**](https://github.com/PrimelPJ/grc-vendor-risk) | Automated vendor risk assessment — maps questionnaire responses to NIST CSF controls, generates risk scores and remediation output | Python, pandas |
 | **ReMotion ML Pipeline** | Azure-based ETL pipeline and motion classification model for prosthetics sensor data | Python, Azure Data Factory, scikit-learn, pandas |
-| **Maktabah Dashboard** | Live fundraising dashboard with GoFundMe data integration and pledge tracker | React, JavaScript |
+
 
 ---
 
