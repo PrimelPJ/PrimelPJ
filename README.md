@@ -14,11 +14,11 @@
 
 ## About
 
-CS student at the **University of Calgary** building across the full stack — REST APIs, mobile apps, data pipelines, and fintech infrastructure. I care about code that is fast, readable, and ships.
+CS student at the **University of Calgary** building across the full stack: REST APIs, mobile apps, data pipelines, and fintech infrastructure. I care about code that is fast, readable, and ships.
 
 Currently co-founding **Forq**, a food payment platform built on Stripe Issuing, Flinks, Node.js, PostgreSQL, and React Native Expo targeting BNPL food credit and corporate meal cards.
 
-Previously at **TechHive Advisory** doing business development and compliance consulting across Canada, UAE, and Europe — mapping African data protection law (NDPA, Kenya DPA) as a GTM angle for foreign companies processing African citizen data. Also built ML data pipelines on Azure for **ReMotion Prosthetics**.
+Previously at **TechHive Advisory** doing business development and compliance consulting across Canada, UAE, and Europe. Mapped African data protection law (NDPA, Kenya DPA) as a GTM angle for foreign companies processing African citizen data. Also built ML data pipelines on Azure for **ReMotion Prosthetics**.
 
 ---
 
@@ -26,10 +26,10 @@ Previously at **TechHive Advisory** doing business development and compliance co
 
 | Project | Description | Stack |
 |---------|-------------|-------|
-| [**Forq**](https://github.com/PrimelPJ/forq) | Food payment platform — BNPL food credit and corporate meal card. Stripe Issuing + Flinks open banking, card issuance, transaction ledger, group bill-splitting | React Native Expo, Node.js, Express, PostgreSQL, Supabase, Stripe |
+| [**Forq**](https://github.com/PrimelPJ/forq) | Food payment platform with BNPL food credit and corporate meal card. Stripe Issuing + Flinks open banking, card issuance, transaction ledger, group bill-splitting | React Native Expo, Node.js, Express, PostgreSQL, Supabase, Stripe |
 | [**Areej**](https://github.com/PrimelPJ/areej) | Full-stack Islamic personal growth app. Quran reader with per-ayah bookmarks, 9 hadith collections, 99 Names, 60+ duas, sunnah habit tracker, daily challenges, badges | React, Node.js, Supabase, Vite |
 | [**Gym**](https://github.com/PrimelPJ/Gym) | Minimal iOS workout tracker. 3-tab layout, streak tracking, volume and session stats, dark mode | Swift, SwiftUI, Core Data |
-| [**GRC Vendor Risk Tool**](https://github.com/PrimelPJ/grc-vendor-risk) | Automated vendor risk assessment — maps questionnaire responses to NIST CSF controls, generates risk scores and remediation output | Python, pandas |
+| [**GRC Vendor Risk Tool**](https://github.com/PrimelPJ/grc-vendor-risk) | Automated vendor risk assessment. Maps questionnaire responses to NIST CSF controls, generates risk scores and remediation output | Python, pandas |
 | **ReMotion ML Pipeline** | Azure-based ETL pipeline and motion classification model for prosthetics sensor data | Python, Azure Data Factory, scikit-learn, pandas |
 
 ---
@@ -108,5 +108,5 @@ Previously at **TechHive Advisory** doing business development and compliance co
 ---
 
 <div align="center">
-  <sub>Open to new grad SWE, fintech, and backend roles for 2025–2026 · <a href="https://primelj.dev">primelj.dev</a></sub>
+  <sub>Open to new grad SWE, fintech, and backend roles for 2025-2026 · <a href="https://primelj.dev">primelj.dev</a></sub>
 </div>
