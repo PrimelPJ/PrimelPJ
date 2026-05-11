@@ -1,64 +1,71 @@
 <div align="center">
 
-# Primel Jayawardana
+<h1>Primel Jayawardana</h1>
 
-**CS @ University of Calgary &nbsp;|&nbsp; Backend · Distributed Systems · Fintech**
+<p>CS @ University of Calgary &nbsp;&nbsp;|&nbsp;&nbsp; Backend · Distributed Systems · Fintech</p>
 
-[![Portfolio](https://img.shields.io/badge/primelj.dev-000000?style=flat-square&logo=vercel&logoColor=white)](https://primelj.dev)
+[![Portfolio](https://img.shields.io/badge/primelj.dev-000?style=flat-square&logo=vercel&logoColor=white)](https://primelj.dev)
+&nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/primelj)
+&nbsp;
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/primel_jayawardana_)
 
 </div>
 
----
+<br>
 
 I build at the infrastructure layer and ship production code.
 
-Currently co-founding **[Forq](https://github.com/PrimelPJ/forq)** — a food BNPL and corporate meal card platform on Stripe Issuing and Flinks open banking. Previously: ML data pipelines at **ReMotion Prosthetics** on Azure, compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe.
+Co-founding **[Forq](https://github.com/PrimelPJ/forq)**, a food payment platform on Stripe Issuing and Flinks open banking. Previously built ML data pipelines at **ReMotion Prosthetics** on Azure, and did compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe. When I implement something, I read the paper first.
 
-When I implement something, I read the paper first.
-
----
+<br>
 
 ## Projects
 
-### [Forq](https://github.com/PrimelPJ/forq) &mdash; Food Payment Platform
+<table>
+<tr>
+<td width="50%" valign="top">
 
-Co-founded fintech startup building corporate meal cards and food BNPL. Stripe Issuing handles physical and virtual card issuance; Flinks connects bank accounts for open-banking-powered repayment. Built the transaction ledger, group bill-splitting logic, and backend API from the ground up.
+**[Forq](https://github.com/PrimelPJ/forq)**
 
-```
-USER PAYS  →  Stripe Issuing card  →  transaction webhook  →  ledger write
-                                              ↓
-                                   Flinks balance check  →  repayment schedule
-```
+Food BNPL and corporate meal cards. Stripe Issuing handles card issuance, Flinks connects bank accounts for open-banking repayment. Built the transaction ledger, group bill-splitting engine, and backend API from scratch.
 
-`React Native Expo · Node.js · PostgreSQL · Supabase · Stripe · Flinks`
+`React Native` `Node.js` `PostgreSQL` `Supabase` `Stripe` `Flinks`
 
----
+</td>
+<td width="50%" valign="top">
 
-### [Areej](https://github.com/PrimelPJ/areej) &mdash; Islamic Personal Growth App
+**[Areej](https://github.com/PrimelPJ/areej)** &nbsp; [live](https://areej.vercel.app)
 
-Full-stack web app with a Quran reader, 9 hadith collections, 99 Names of Allah, 60+ duas, a daily habit tracker, and a badge/streak system. Live on Vercel. Built end-to-end solo — product, design, backend, deployment.
+Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ duas, daily habit tracker, and badge system. Built and shipped end-to-end solo.
 
-`React · Node.js · Supabase · Vite` &nbsp;·&nbsp; **[Live](https://areej.vercel.app)**
+`React` `Node.js` `Supabase` `Vite`
 
----
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-### [GRC Vendor Risk Tool](https://github.com/PrimelPJ/grc-vendor-risk) &mdash; Automated Risk Scoring
+**[GRC Vendor Risk Tool](https://github.com/PrimelPJ/grc-vendor-risk)**
 
-Built at TechHive Advisory. Parses vendor questionnaire responses and maps them to NIST CSF controls to produce a risk score automatically. Replaced a manual spreadsheet process used across client engagements.
+Built at TechHive Advisory. Parses vendor questionnaire responses and maps them to NIST CSF controls to auto-generate risk scores. Replaced a manual spreadsheet process across client engagements.
 
-`Python · pandas`
+`Python` `pandas`
 
----
+</td>
+<td width="50%" valign="top">
 
-### [Gym](https://github.com/PrimelPJ/Gym) &mdash; iOS Workout Tracker
+**[Gym](https://github.com/PrimelPJ/Gym)**
 
-Native iOS app with streak tracking, volume analytics across muscle groups, and full dark mode support. Shipped to TestFlight.
+Native iOS workout tracker with streak tracking, per-muscle volume analytics, and dark mode. Shipped to TestFlight.
 
-`Swift · SwiftUI · Core Data`
+`Swift` `SwiftUI` `Core Data`
 
----
+</td>
+</tr>
+</table>
+
+<br>
 
 ## Stack
 
@@ -76,7 +83,7 @@ Native iOS app with streak tracking, volume analytics across muscle groups, and 
 ![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 
-**Backend & Infra**
+**Backend & Infrastructure**
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
@@ -91,7 +98,6 @@ Native iOS app with streak tracking, volume analytics across muscle groups, and 
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![REST](https://img.shields.io/badge/REST-FF6C37?style=flat-square&logo=postman&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 
 **Frontend & Mobile**
@@ -110,20 +116,23 @@ Native iOS app with streak tracking, volume analytics across muscle groups, and 
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Azure Data Factory](https://img.shields.io/badge/Azure%20Data%20Factory-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 
----
+<br>
 
 ## Stats
 
 <div align="center">
   <img height="160" src="https://github-readme-stats.vercel.app/api?username=PrimelPJ&show_icons=true&theme=dark&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" />
+  &nbsp;
   <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PrimelPJ&layout=compact&theme=dark&hide_border=true&langs_count=8&hide=jupyter%20notebook" />
 </div>
+
+<br>
 
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=PrimelPJ&theme=dark&hide_border=true" />
 </div>
 
----
+<br>
 
 <div align="center">
   <sub>Open to backend, SWE, and fintech internships for 2025/2026 &nbsp;·&nbsp; <a href="https://primelj.dev">primelj.dev</a></sub>
