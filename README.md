@@ -12,76 +12,51 @@
 
 ---
 
-I build things at the infrastructure layer and ship them.
+I build at the infrastructure layer and ship production code.
 
-Currently co-founding **[Forq](https://github.com/PrimelPJ/forq)** — a food payment platform on Stripe Issuing and Flinks open banking. Before that: ML data pipelines at **ReMotion Prosthetics** on Azure, compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe, and a growing list of systems projects I build to actually understand how things work.
+Currently co-founding **[Forq](https://github.com/PrimelPJ/forq)** — a food BNPL and corporate meal card platform on Stripe Issuing and Flinks open banking. Previously: ML data pipelines at **ReMotion Prosthetics** on Azure, compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe.
 
 When I implement something, I read the paper first.
 
 ---
 
-## Systems Projects
+## Projects
 
-These exist because I wanted to understand how the infrastructure I use every day actually works.
+### [Forq](https://github.com/PrimelPJ/forq) &mdash; Food Payment Platform
+
+Co-founded fintech startup building corporate meal cards and food BNPL. Stripe Issuing handles physical and virtual card issuance; Flinks connects bank accounts for open-banking-powered repayment. Built the transaction ledger, group bill-splitting logic, and backend API from the ground up.
+
+```
+USER PAYS  →  Stripe Issuing card  →  transaction webhook  →  ledger write
+                                              ↓
+                                   Flinks balance check  →  repayment schedule
+```
+
+`React Native Expo · Node.js · PostgreSQL · Supabase · Stripe · Flinks`
 
 ---
 
-### [raftdb](https://github.com/PrimelPJ/raftdb) &mdash; Distributed Key-Value Store
+### [Areej](https://github.com/PrimelPJ/areej) &mdash; Islamic Personal Growth App
 
-Built Raft consensus from scratch. Not a tutorial walkthrough — the actual algorithm: randomized leader election, majority-quorum log replication, fast log backtracking via conflict index hints, compare-and-swap, and safe re-election on leader failure.
+Full-stack web app with a Quran reader, 9 hadith collections, 99 Names of Allah, 60+ duas, a daily habit tracker, and a badge/streak system. Live on Vercel. Built end-to-end solo — product, design, backend, deployment.
 
-The hard parts: stale RPCs from old terms arriving out of order, the "only commit current-term entries" safety rule (Section 5.4.2 of the paper), and livelock prevention. A 5-node cluster survives killing the leader and elects a new one without dropping a write.
-
-```
-PUT user:1  ->  Raft log  ->  quorum ack  ->  commit  ->  apply to KV
-                 node0 LEADER
-                 node1 FOLLOWER  AppendEntries RPC
-                 node2 FOLLOWER  AppendEntries RPC
-```
-
-`Python · asyncio · pytest` &nbsp; **9/9 tests passing**
+`React · Node.js · Supabase · Vite` &nbsp;·&nbsp; **[Live](https://areej.vercel.app)**
 
 ---
 
-### [qstream](https://github.com/PrimelPJ/qstream) &nbsp; &mdash; Persistent Message Queue
+### [GRC Vendor Risk Tool](https://github.com/PrimelPJ/grc-vendor-risk) &mdash; Automated Risk Scoring
 
-SQS semantics built over a hand-rolled Write-Ahead Log. Every mutation is CRC32-checksummed and fsync'd before returning. Crash the process and restart — all unacked messages come back from the WAL replay.
+Built at TechHive Advisory. Parses vendor questionnaire responses and maps them to NIST CSF controls to produce a risk score automatically. Replaced a manual spreadsheet process used across client engagements.
 
-Features: at-least-once delivery, visibility timeouts, dead-letter queues after N failures, priority heap (0-9), 5-minute deduplication window, delay queues, long polling, batch receive, and segment rotation at 64 MiB.
-
-```
-WAL record format:
-[ MAGIC 4B ][ CRC32 4B ][ timestamp_ns 8B ][ len 4B ][ payload ]
-                  ^
-       verified on every replay. truncated tail = safe discard.
-```
-
-`Python · asyncio · pytest` &nbsp; **14/14 tests passing**
+`Python · pandas`
 
 ---
 
-### [apexgateway](https://github.com/PrimelPJ/apexgateway) &nbsp; &mdash; API Gateway
+### [Gym](https://github.com/PrimelPJ/Gym) &mdash; iOS Workout Tracker
 
-Zero npm dependencies. Production-grade circuit breaker, hybrid rate limiter, and load balancer from scratch.
+Native iOS app with streak tracking, volume analytics across muscle groups, and full dark mode support. Shipped to TestFlight.
 
-**Circuit breaker:** CLOSED / OPEN / HALF_OPEN state machine. Ring-buffer sliding window tracks failure rate in O(1). After a cooldown, sends probe requests before reopening traffic.
-
-**Rate limiter:** Token bucket (burst control) combined with sliding window (rate smoothing) per identity key. Tier-aware — `default` and `premium` clients get different limits. Designed to swap the in-process store for Redis Lua scripts for multi-instance deployment.
-
-**Load balancer:** Five strategies. Round robin, weighted (smooth Nginx algorithm), least connections, IP hash for sticky sessions, and Power of Two Choices — near-optimal distribution with O(1) overhead per request.
-
-`Node.js · stdlib only` &nbsp; **17/17 tests passing**
-
----
-
-## Product Projects
-
-| Project | What it is | Stack |
-|---------|-----------|-------|
-| [**Forq**](https://github.com/PrimelPJ/forq) | Food BNPL + corporate meal card. Stripe Issuing card issuance, Flinks open banking, transaction ledger, group bill-splitting | React Native Expo, Node.js, PostgreSQL, Supabase, Stripe |
-| [**Areej**](https://github.com/PrimelPJ/areej) | Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ duas, habit tracker, badges. Live on Vercel | React, Node.js, Supabase, Vite |
-| [**Gym**](https://github.com/PrimelPJ/Gym) | iOS workout tracker. Streak tracking, volume stats, dark mode | Swift, SwiftUI, Core Data |
-| [**GRC Vendor Risk Tool**](https://github.com/PrimelPJ/grc-vendor-risk) | Automated vendor risk scoring. Maps questionnaire responses to NIST CSF controls | Python, pandas |
+`Swift · SwiftUI · Core Data`
 
 ---
 
@@ -96,14 +71,19 @@ Zero npm dependencies. Production-grade circuit breaker, hybrid rate limiter, an
 ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 
 **Backend & Infra**
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
@@ -111,6 +91,8 @@ Zero npm dependencies. Production-grade circuit breaker, hybrid rate limiter, an
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![REST](https://img.shields.io/badge/REST-FF6C37?style=flat-square&logo=postman&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 
 **Frontend & Mobile**
 
