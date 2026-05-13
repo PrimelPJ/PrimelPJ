@@ -129,11 +129,6 @@ Native iOS workout tracker with streak tracking, per-muscle volume analytics, an
 
 ## Stats
 
-<div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=PrimelPJ&show_icons=true&theme=dark&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" />
-  &nbsp;
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PrimelPJ&layout=compact&theme=dark&hide_border=true&langs_count=8&hide=jupyter%20notebook" />
-</div>
 
 <br>
 
