@@ -8,7 +8,7 @@
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/primelj)
 &nbsp;
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/primel_jayawardana_)
+[![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/PrimelJay)
 
 </div>
 
@@ -26,13 +26,44 @@ Co-founding **[Forq](https://github.com/PrimelPJ/forq)**, a food payment platfor
 <tr>
 <td width="50%" valign="top">
 
+**[Stratum](https://github.com/PrimelPJ/stratum)**
+
+LSM-tree key-value store from scratch. Full write path: WAL → MemTable → SSTable flush. Custom binary SSTable format with bloom filters, crash recovery, and background compaction.
+
+`Go` `Storage Internals` `Concurrency`
+
+</td>
+<td width="50%" valign="top">
+
+**[Conduit](https://github.com/PrimelPJ/conduit)**
+
+Priority task queue from scratch. Binary min-heap scheduler, exponential backoff retries, dead-letter queue, atomic JSON persistence, and an HTTP management API. Zero runtime dependencies.
+
+`TypeScript` `Distributed Systems` `Networking`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[Beacon](https://github.com/PrimelPJ/beacon)**
+
+Observability pipeline from scratch. Prometheus-format scraping, in-memory time-series DB with circular buffers, alert state machine with duration hold and cooldown, and HTTP query API.
+
+`Python` `Observability` `Infra`
+
+</td>
+<td width="50%" valign="top">
+
 **[Forq](https://github.com/PrimelPJ/forq)**
 
 Food BNPL and corporate meal cards. Stripe Issuing handles card issuance, Flinks connects bank accounts for open-banking repayment. Built the transaction ledger, group bill-splitting engine, and backend API from scratch.
 
-`React Native` `Node.js` `PostgreSQL` `Supabase` `Stripe` `Flinks`
+`React Native` `Node.js` `PostgreSQL` `Stripe` `Flinks`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **[Areej](https://github.com/PrimelPJ/areej)**
@@ -42,8 +73,6 @@ Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ d
 `React` `Node.js` `Supabase` `Vite`
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **[GRC Vendor Risk Tool](https://github.com/PrimelPJ/grc-vendor-risk)**
@@ -51,15 +80,6 @@ Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ d
 Built at TechHive Advisory. Parses vendor questionnaire responses and maps them to NIST CSF controls to auto-generate risk scores. Replaced a manual spreadsheet process across client engagements.
 
 `Python` `pandas`
-
-</td>
-<td width="50%" valign="top">
-
-**[Gym](https://github.com/PrimelPJ/Gym)**
-
-Native iOS workout tracker with streak tracking, per-muscle volume analytics, and dark mode. Shipped to TestFlight.
-
-`Swift` `SwiftUI` `Core Data`
 
 </td>
 </tr>
@@ -71,6 +91,7 @@ Native iOS workout tracker with streak tracking, per-muscle volume analytics, an
 
 **Languages**
 
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
@@ -129,7 +150,6 @@ Native iOS workout tracker with streak tracking, per-muscle volume analytics, an
 
 ## Stats
 
-
 <br>
 
 <div align="center">
@@ -139,5 +159,5 @@ Native iOS workout tracker with streak tracking, per-muscle volume analytics, an
 <br>
 
 <div align="center">
-  <sub>Open to backend, SWE, and fintech internships for 2025/2026 &nbsp;·&nbsp; <a href="https://primelj.dev">primelj.dev</a></sub>
+  <sub>Open to backend and SWE internships for Summer/Fall 2026 &nbsp;·&nbsp; <a href="https://primelj.dev">primelj.dev</a></sub>
 </div>
