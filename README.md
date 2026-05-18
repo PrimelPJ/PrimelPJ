@@ -26,31 +26,11 @@ Co-founding **[Forq](https://github.com/PrimelPJ/forq)**, a food payment platfor
 <tr>
 <td width="50%" valign="top">
 
-**[Stratum](https://github.com/PrimelPJ/stratum)**
+**[Areej](https://github.com/PrimelPJ/areej)**
 
-LSM-tree key-value store from scratch. Full write path: WAL → MemTable → SSTable flush. Custom binary SSTable format with bloom filters, crash recovery, and background compaction.
+Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ duas, daily habit tracker, and badge system. Built and shipped end-to-end solo.
 
-`Go` `Storage Internals` `Concurrency`
-
-</td>
-<td width="50%" valign="top">
-
-**[Conduit](https://github.com/PrimelPJ/conduit)**
-
-Priority task queue from scratch. Binary min-heap scheduler, exponential backoff retries, dead-letter queue, atomic JSON persistence, and an HTTP management API. Zero runtime dependencies.
-
-`TypeScript` `Distributed Systems` `Networking`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**[Beacon](https://github.com/PrimelPJ/beacon)**
-
-Observability pipeline from scratch. Prometheus-format scraping, in-memory time-series DB with circular buffers, alert state machine with duration hold and cooldown, and HTTP query API.
-
-`Python` `Observability` `Infra`
+`React` `Node.js` `Supabase` `Vite`
 
 </td>
 <td width="50%" valign="top">
@@ -66,20 +46,20 @@ Food BNPL and corporate meal cards. Stripe Issuing handles card issuance, Flinks
 <tr>
 <td width="50%" valign="top">
 
-**[Areej](https://github.com/PrimelPJ/areej)**
-
-Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ duas, daily habit tracker, and badge system. Built and shipped end-to-end solo.
-
-`React` `Node.js` `Supabase` `Vite`
-
-</td>
-<td width="50%" valign="top">
-
 **[GRC Vendor Risk Tool](https://github.com/PrimelPJ/grc-vendor-risk)**
 
 Built at TechHive Advisory. Parses vendor questionnaire responses and maps them to NIST CSF controls to auto-generate risk scores. Replaced a manual spreadsheet process across client engagements.
 
 `Python` `pandas`
+
+</td>
+<td width="50%" valign="top">
+
+**[Gym](https://github.com/PrimelPJ/Gym)**
+
+Native iOS workout tracker with streak tracking, per-muscle volume analytics, and dark mode. Shipped to TestFlight.
+
+`Swift` `SwiftUI` `Core Data`
 
 </td>
 </tr>
