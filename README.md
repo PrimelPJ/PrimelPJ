@@ -35,6 +35,17 @@ Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ d
 </td>
 <td width="50%" valign="top">
 
+**[Aegis](https://github.com/PrimelPJ/aegis)**
+
+Tamper-evident audit log and threat-detection engine in Go with zero dependencies. Append-only segmented storage where the integrity of the entire event history reduces to a single Ed25519 key, plus an independent verifier that proves offline that nothing was altered. Maps to NIST SP 800-92, SOC 2, and PCI DSS audit-trail controls.
+
+`Go` `Ed25519` `Merkle`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 **[Forq](https://github.com/PrimelPJ/forq)**
 
 Food BNPL and corporate meal cards. Stripe Issuing handles card issuance, Flinks connects bank accounts for open-banking repayment. Built the transaction ledger, group bill-splitting engine, and backend API from scratch.
@@ -42,8 +53,6 @@ Food BNPL and corporate meal cards. Stripe Issuing handles card issuance, Flinks
 `React Native` `Node.js` `PostgreSQL` `Stripe` `Flinks`
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **[GRC Vendor Risk Tool](https://github.com/PrimelPJ/grc-vendor-risk)**
@@ -51,15 +60,6 @@ Food BNPL and corporate meal cards. Stripe Issuing handles card issuance, Flinks
 Built at TechHive Advisory. Parses vendor questionnaire responses and maps them to NIST CSF controls to auto-generate risk scores. Replaced a manual spreadsheet process across client engagements.
 
 `Python` `pandas`
-
-</td>
-<td width="50%" valign="top">
-
-**[Gym](https://github.com/PrimelPJ/Gym)**
-
-Native iOS workout tracker with streak tracking, per-muscle volume analytics, and dark mode. Shipped to TestFlight.
-
-`Swift` `SwiftUI` `Core Data`
 
 </td>
 </tr>
@@ -133,7 +133,7 @@ Native iOS workout tracker with streak tracking, per-muscle volume analytics, an
 <br>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PrimelPJ&theme=dark&hide_border=true" />
+  <img src="https://streak-stats.demolab.com/?user=PrimelPJ&theme=dark&hide_border=true" />
 </div>
 
 <br>
