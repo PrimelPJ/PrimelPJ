@@ -2,7 +2,7 @@
 
 <h1>Primel Jayawardana</h1>
 
-<p>CS @ University of Calgary &nbsp;&nbsp;|&nbsp;&nbsp; Backend · Full-Stack · Systems</p>
+<p>CS @ University of Calgary &nbsp;&nbsp;|&nbsp;&nbsp; Systems · Robotics · Backend</p>
 
 [![Portfolio](https://img.shields.io/badge/primelj.dev-000?style=flat-square&logo=vercel&logoColor=white)](https://primelj.dev)
 &nbsp;
@@ -16,7 +16,7 @@
 
 I build at the infrastructure layer and ship production code.
 
-Co-founding **[Forq](https://github.com/PrimelPJ/forq)**, a food payment platform on Stripe Issuing and Flinks open banking. Previously built ML data pipelines at **ReMotion Prosthetics** on Azure, and did compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe. When I implement something, I read the paper first.
+Lately I have been building robotics systems on ROS2 and AWS: robot fleet telemetry, edge and cloud perception, language-grounded navigation, and on-robot anomaly detection. Co-founding **[Forq](https://github.com/PrimelPJ/forq)**, a food payment platform on Stripe Issuing and Flinks open banking. Previously built ML data pipelines at **ReMotion Prosthetics** on Azure, and did compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe. When I implement something, I read the paper first.
 
 <br>
 
@@ -26,40 +26,40 @@ Co-founding **[Forq](https://github.com/PrimelPJ/forq)**, a food payment platfor
 <tr>
 <td width="50%" valign="top">
 
-**[Areej](https://github.com/PrimelPJ/areej)**
+**[Lexicon](https://github.com/PrimelPJ/lexicon)**
 
-Islamic personal growth app. Quran reader, 9 hadith collections, 99 Names, 60+ duas, daily habit tracker, and badge system. Built and shipped end-to-end solo.
+Open-vocabulary language-grounded navigation for ROS2. Say "go to the red chair" and a vision-language model (OWL-ViT) finds it, depth plus tf2 turn the pixel into a 3D map pose, and Nav2 drives there. Lifecycle nodes, a custom action interface, and inference that never blocks the executor.
 
-`React` `Node.js` `Supabase` `Vite`
+`ROS2` `Nav2` `PyTorch` `OWL-ViT`
 
 </td>
 <td width="50%" valign="top">
 
-**[Aegis](https://github.com/PrimelPJ/aegis)**
+**[Vantage](https://github.com/PrimelPJ/vantage)**
 
-Tamper-evident audit log and threat-detection engine in Go with zero dependencies. Append-only segmented storage where the integrity of the entire event history reduces to a single Ed25519 key, plus an independent verifier that proves offline that nothing was altered. Maps to NIST SP 800-92, SOC 2, and PCI DSS audit-trail controls.
+Edge and cloud object detection router for ROS2. A small model runs on the robot every frame; a per-frame policy escalates only the uncertain frames to a heavier model on an AWS SageMaker endpoint, and captures hard cases to S3 to build a retraining set.
 
-`Go` `Ed25519` `Merkle`
+`ROS2` `ONNX` `SageMaker` `PyTorch`
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-**[Forq](https://github.com/PrimelPJ/forq)**
+**[Beacon](https://github.com/PrimelPJ/beacon)**
 
-Food BNPL and corporate meal cards. Stripe Issuing handles card issuance, Flinks connects bank accounts for open-banking repayment. Built the transaction ledger, group bill-splitting engine, and backend API from scratch.
+Robot fleet telemetry and monitoring platform. Robots stream over MQTT to AWS IoT Core, which splits into a hot path (Kinesis, Lambda, DynamoDB) for live monitoring and a cold path (Firehose, S3 Parquet, Athena) for analytics. Fully Terraformed, runs in simulation.
 
-`React Native` `Node.js` `PostgreSQL` `Stripe` `Flinks`
+`ROS2` `AWS IoT` `Kinesis` `Terraform`
 
 </td>
 <td width="50%" valign="top">
 
-**[GRC Vendor Risk Tool](https://github.com/PrimelPJ/grc-vendor-risk)**
+**[Reflex](https://github.com/PrimelPJ/reflex)**
 
-Built at TechHive Advisory. Parses vendor questionnaire responses and maps them to NIST CSF controls to auto-generate risk scores. Replaced a manual spreadsheet process across client engagements.
+Learned proprioceptive anomaly detection for ROS2. An autoencoder trains on a robot's normal joint velocity and effort, exports to ONNX, and runs in a lifecycle node that publishes standard `/diagnostics`, flagging collisions, stalls, and oscillation in real time.
 
-`Python` `pandas`
+`ROS2` `PyTorch` `ONNX` `Autoencoder`
 
 </td>
 </tr>
@@ -97,6 +97,7 @@ Built at TechHive Advisory. Parses vendor questionnaire responses and maps them 
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
@@ -117,27 +118,34 @@ Built at TechHive Advisory. Parses vendor questionnaire responses and maps them 
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
-**Data & ML**
+**ML & Robotics**
 
+![ROS 2](https://img.shields.io/badge/ROS%202-22314E?style=flat-square&logo=ros&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![ONNX](https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white)
-![Azure Data Factory](https://img.shields.io/badge/Azure%20Data%20Factory-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 ![Azure ML](https://img.shields.io/badge/Azure%20ML-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 
 <br>
 
 ## Stats
 
-<br>
-
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=PrimelPJ&theme=dark&hide_border=true" />
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=PrimelPJ&show_icons=true&theme=dark&hide_border=true&include_all_commits=true&count_private=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=PrimelPJ&layout=compact&theme=dark&hide_border=true&langs_count=8" />
+
+<br><br>
+
+<img src="https://streak-stats.demolab.com/?user=PrimelPJ&theme=dark&hide_border=true" />
+
 </div>
 
 <br>
 
 <div align="center">
-  <sub>Open to backend and SWE internships for Summer/Fall 2026 &nbsp;·&nbsp; <a href="https://primelj.dev">primelj.dev</a></sub>
+  <sub>Open to SWE, systems, and robotics internships for Summer/Fall 2026 &nbsp;·&nbsp; <a href="https://primelj.dev">primelj.dev</a></sub>
 </div>
