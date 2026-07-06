@@ -2,7 +2,7 @@
 
 <h1>Primel Jayawardana</h1>
 
-<p>CS @ University of Calgary &nbsp;&nbsp;|&nbsp;&nbsp; Systems · Robotics · Backend</p>
+<p>CS @ University of Calgary &nbsp;&nbsp;|&nbsp;&nbsp; System Design · Robotics · Full Stack</p>
 
 [![Portfolio](https://img.shields.io/badge/primelj.dev-000?style=flat-square&logo=vercel&logoColor=white)](https://primelj.dev)
 &nbsp;
