@@ -2,7 +2,8 @@
 
 <h1>Primel Jayawardana</h1>
 
-<p>CS @ University of Calgary &nbsp;&nbsp;|&nbsp;&nbsp; System Design · Robotics · Full Stack</p>
+<p><b>CS @ University of Calgary</b><br>
+<sub>Robotics · State Estimation · Distributed Systems · Full Stack</sub></p>
 
 [![Portfolio](https://img.shields.io/badge/primelj.dev-000?style=flat-square&logo=vercel&logoColor=white)](https://primelj.dev)
 &nbsp;
@@ -16,37 +17,96 @@
 
 I build at the infrastructure layer and ship production code.
 
-Lately I have been building robotics systems on ROS2 and AWS: robot fleet telemetry, edge and cloud perception, language-grounded navigation, and on-robot anomaly detection. Co-founding **[Forq](https://github.com/PrimelPJ/forq)**, a food payment platform on Stripe Issuing and Flinks open banking. Previously built ML data pipelines at **ReMotion Prosthetics** on Azure, and did compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe. When I implement something, I read the paper first.
+Lately I have been building autonomy and robotics systems: GNSS-denied navigation and sensor fusion, ROS2 perception at the edge and in the cloud, language-grounded navigation, fleet telemetry, and on-robot anomaly detection. Co-founding **Forq**, a food payment platform on Stripe Issuing and Flinks open banking. Previously built ML data pipelines at **ReMotion Prosthetics** on Azure, and did compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe.
+
+When I implement something, I read the paper first, and I publish the number that proves it works.
 
 <br>
 
-## Projects
+## Featured
+
+<table>
+<tr>
+<td valign="top">
+
+### [Carcajou](https://github.com/PrimelPJ/Carcajou) &nbsp; <sub>`Python` `Kalman filter` `Stereo VO` `LiDAR`</sub>
+
+**GNSS-denied vehicle navigation, and the benchmark that proves it.**
+
+When a car enters a tunnel the satellites go quiet and everything rests on inertial navigation. Carcajou is a strapdown INS with a 15-state error-state Kalman filter, plus a drift harness that reports the metric vendors are actually held to: **error as a percent of distance travelled**, against a 1 % automotive budget.
+
+| over a 120 s outage | drift |
+|---|---|
+| Industrial MEMS, unaided | 5.36 % |
+| Industrial MEMS, ZUPT + NHC | **0.22 %** (70.6 m becomes 2.9 m) |
+| Consumer MEMS, constraints only | 1.28 % median, 20 % p95 |
+| Consumer MEMS, masked stereo VO | **0.42 % / 0.92 %** |
+| Consumer MEMS, LiDAR map matching | **0.01 %** (about 0.15 m) |
+
+The synthetic generator algebraically inverts the discrete mechanization update, so a noise-free run retraces truth to **1.3e-7 m** over 6 km. Every metre of reported drift is traceable to a deliberately injected sensor error rather than a bug, and that identity is asserted in CI.
+
+Includes the results that undercut the pitch: NHC beats ZUPT, an unmasked camera is measurably worse than no camera, and mapping dynamic objects into the LiDAR map turned out not to matter on this route.
+
+</td>
+</tr>
+</table>
+
+<br>
+
+## Robotics & Autonomy
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**[Lexicon](https://github.com/PrimelPJ/lexicon)**
+**[Datum](https://github.com/PrimelPJ/Datum)**
+
+Dynamic-scene-robust HD-map localization for cheap vision sensors. ONNX semantic masking drops moving objects, 2D ICP registers against the map, and a gated EKF fuses the pose. ROS2 with an AWS map and model pipeline.
+
+`ROS2` `ONNX` `ICP` `EKF` `AWS`
+
+</td>
+<td width="50%" valign="top">
+
+**[Lexicon](https://github.com/PrimelPJ/Lexicon)**
 
 Open-vocabulary language-grounded navigation for ROS2. Say "go to the red chair" and a vision-language model (OWL-ViT) finds it, depth plus tf2 turn the pixel into a 3D map pose, and Nav2 drives there. Lifecycle nodes, a custom action interface, and inference that never blocks the executor.
 
 `ROS2` `Nav2` `PyTorch` `OWL-ViT`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
-**[Vantage](https://github.com/PrimelPJ/vantage)**
+**[Vantage](https://github.com/PrimelPJ/Vantage)**
 
 Edge and cloud object detection router for ROS2. A small model runs on the robot every frame; a per-frame policy escalates only the uncertain frames to a heavier model on an AWS SageMaker endpoint, and captures hard cases to S3 to build a retraining set.
 
 `ROS2` `ONNX` `SageMaker` `PyTorch`
 
 </td>
+<td width="50%" valign="top">
+
+**[Reflex](https://github.com/PrimelPJ/Reflex)**
+
+Learned proprioceptive anomaly detection for ROS2. An autoencoder trains on a robot's normal joint velocity and effort, exports to ONNX, and runs in a lifecycle node publishing standard `/diagnostics`, flagging collisions, stalls, and oscillation in real time.
+
+`ROS2` `PyTorch` `ONNX` `Autoencoder`
+
+</td>
 </tr>
+</table>
+
+<br>
+
+## Data & Infrastructure
+
+<table>
 <tr>
 <td width="50%" valign="top">
 
-**[Beacon](https://github.com/PrimelPJ/beacon)**
+**[Beacon](https://github.com/PrimelPJ/Beacon1)**
 
 Robot fleet telemetry and monitoring platform. Robots stream over MQTT to AWS IoT Core, which splits into a hot path (Kinesis, Lambda, DynamoDB) for live monitoring and a cold path (Firehose, S3 Parquet, Athena) for analytics. Fully Terraformed, runs in simulation.
 
@@ -55,11 +115,11 @@ Robot fleet telemetry and monitoring platform. Robots stream over MQTT to AWS Io
 </td>
 <td width="50%" valign="top">
 
-**[Reflex](https://github.com/PrimelPJ/reflex)**
+**[Sluice](https://github.com/PrimelPJ/Sluice)**
 
-Learned proprioceptive anomaly detection for ROS2. An autoencoder trains on a robot's normal joint velocity and effort, exports to ONNX, and runs in a lifecycle node that publishes standard `/diagnostics`, flagging collisions, stalls, and oscillation in real time.
+Serverless near-real-time market data lakehouse on AWS. Kinesis to Firehose to Parquet on S3, hourly Athena OHLCV rollups orchestrated by Step Functions, DynamoDB-backed serving API. Fully Terraformed.
 
-`ROS2` `PyTorch` `ONNX` `Autoencoder`
+`AWS` `Kinesis` `Athena` `Terraform`
 
 </td>
 </tr>
@@ -79,10 +139,21 @@ Learned proprioceptive anomaly detection for ROS2. An autoencoder trains on a ro
 ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+
+**Robotics & ML**
+
+![ROS 2](https://img.shields.io/badge/ROS%202-22314E?style=flat-square&logo=ros&logoColor=white)
+![Nav2](https://img.shields.io/badge/Nav2-22314E?style=flat-square&logo=ros&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![ONNX](https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white)
+![Azure ML](https://img.shields.io/badge/Azure%20ML-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 
 **Backend & Infrastructure**
 
@@ -90,23 +161,19 @@ Learned proprioceptive anomaly detection for ROS2. An autoencoder trains on a ro
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![REST](https://img.shields.io/badge/REST-FF6C37?style=flat-square&logo=postman&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
-![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 
 **Frontend & Mobile**
 
@@ -117,17 +184,6 @@ Learned proprioceptive anomaly detection for ROS2. An autoencoder trains on a ro
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-
-**ML & Robotics**
-
-![ROS 2](https://img.shields.io/badge/ROS%202-22314E?style=flat-square&logo=ros&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![ONNX](https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=python&logoColor=white)
-![Azure ML](https://img.shields.io/badge/Azure%20ML-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 
 <br>
 
