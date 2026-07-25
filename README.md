@@ -198,7 +198,3 @@ Serverless near-real-time market data lakehouse on AWS. Kinesis to Firehose to P
 </div>
 
 <br>
-
-<div align="center">
-  <sub>Open to SWE, systems, and robotics internships for Summer/Fall 2026 &nbsp;·&nbsp; <a href="https://primelj.dev">primelj.dev</a></sub>
-</div>
