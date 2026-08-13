@@ -1,5 +1,9 @@
 <div align="center">
 
+<img src="contributions.svg" alt="GitHub contribution heatmap" />
+
+<br>
+
 <h1>Primel Jayawardana</h1>
 
 <p><b>CS @ University of Calgary</b><br>
@@ -186,19 +190,5 @@ Serverless near-real-time market data lakehouse on AWS. Kinesis to Firehose to P
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
 <br>
-
-## Stats
-
-<div align="center">
-
-<br>
-
-<img src="contributions.svg" alt="GitHub contribution heatmap" />
-
-<br><br>
-
-<img src="portrait.svg" alt="ASCII portrait" />
-
-</div>
 
 <br>
