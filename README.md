@@ -191,9 +191,13 @@ Serverless near-real-time market data lakehouse on AWS. Kinesis to Firehose to P
 
 <div align="center">
 
+<br>
+
+<img src="contributions.svg" alt="GitHub contribution heatmap" />
+
 <br><br>
 
-<img src="https://streak-stats.demolab.com/?user=PrimelPJ&theme=dark&hide_border=true" />
+<img src="portrait.svg" alt="ASCII portrait" />
 
 </div>
 
