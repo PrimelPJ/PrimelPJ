@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/PrimelPJ">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&width=550&lines=%24+whoami;Primel+Jayawardana;%24+nmap+-sV+--script+vuln;%24+tail+-f+%2Fvar%2Flog%2Fhoneypot.jsonl;%24+terraform+apply+-auto-approve" alt="Terminal typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&width=550&lines=%24+who+am+i;Primel+Jayawardana;%24+nmap+-sV+--script+vuln;%24+tail+-f+%2Fvar%2Flog%2Fhoneypot.jsonl;%24+terraform+apply+-auto-approve" alt="Terminal typing animation" />
 </a>
 
 <br>
