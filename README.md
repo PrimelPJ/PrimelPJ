@@ -90,11 +90,11 @@ Tamper-evident audit log and streaming threat detection engine. Append-only even
 </td>
 <td width="50%" valign="top">
 
-**[Watchpost](https://github.com/PrimelPJ/watchpost)**
+**[Forge](https://github.com/PrimelPJ/forge)**
 
-AWS account monitoring with auto-remediation. Watches CloudTrail for risky changes — public S3 buckets, open security groups, disabled logging — and fires Lambda functions to revert them automatically. EventBridge rules, SNS alerts, fully Terraformed.
+ICS/SCADA security monitoring lab. Simulated water treatment plant on a hand-built Modbus TCP server with an HMI control loop, passive traffic monitor, OT asset discovery, and seven detection rules mapped to MITRE ATT&CK for ICS. Includes recon, hijack, and DoS attack scripts.
 
-`Python` `AWS Lambda` `CloudTrail` `Terraform`
+`Python` `Modbus TCP` `ICS/SCADA` `MITRE ATT&CK`
 
 </td>
 </tr>
