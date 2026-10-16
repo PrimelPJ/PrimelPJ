@@ -29,7 +29,7 @@
 
 I build security tools, threat detection systems, and hardened infrastructure.
 
-Most of what I ship is defensive: honeypots that catch live attackers, SIEM rules that fire on brute force and password spray, cloud posture management that finds misconfigurations and auto-remediates them, and tamper-evident audit logs that prove nothing was altered. I also build at the infrastructure layer — distributed systems, ICS/SCADA security, and cloud-native backends on AWS and Azure.
+Most of what I ship is defensive: honeypots that catch live attackers, SIEM rules that fire on brute force and password spray, cloud posture management that finds misconfigurations and auto-remediates them, and tamper-evident audit logs that prove nothing was altered. I also build at the infrastructure layer - distributed systems, ICS/SCADA security, and cloud-native backends on AWS and Azure.
 
 Previously did compliance consulting at **TechHive Advisory** across Canada, the UAE, and Europe, and built ML data pipelines at **ReMotion Prosthetics** on Azure. Co-founding **Forq**, a food payment platform on Stripe Issuing and Flinks open banking.
 
@@ -45,7 +45,7 @@ Previously did compliance consulting at **TechHive Advisory** across Canada, the
 
 **Cloud honeypot with a live threat map.**
 
-Runs fake SSH, Telnet, and web login services on an Azure VM. Bots find it within minutes and start guessing passwords. Every attempt is geo-tagged, shipped to Azure Log Analytics via managed identity, and drawn on a live world map as it happens. Four Sentinel analytics rules detect brute force, password spray, multi-protocol recon, and web exploit probes — each mapped to MITRE ATT&CK. One `terraform apply` builds the entire stack.
+Runs fake SSH, Telnet, and web login services on an Azure VM. Bots find it within minutes and start guessing passwords. Every attempt is geo-tagged, shipped to Azure Log Analytics via managed identity, and drawn on a live world map as it happens. Four Sentinel analytics rules detect brute force, password spray, multi-protocol recon, and web exploit probes - each mapped to MITRE ATT&CK. One `terraform apply` builds the entire stack.
 
 Nothing ever logs in. There is no shell behind any of the fake services.
 
