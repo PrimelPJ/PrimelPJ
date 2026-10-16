@@ -98,26 +98,6 @@ AWS account monitoring with auto-remediation. Watches CloudTrail for risky chang
 
 </td>
 </tr>
-<tr>
-<td width="50%" valign="top">
-
-**[VaultKey](https://github.com/PrimelPJ/vaultkey)**
-
-Automated secrets rotation engine on AWS. Rotates database credentials, API keys, and arbitrary secrets on a configurable schedule via Lambda and Secrets Manager. Designed as a drop-in compliance primitive for SOC 2 and ISO 27001 environments.
-
-`Python` `AWS Lambda` `Secrets Manager`
-
-</td>
-<td width="50%" valign="top">
-
-**[GRC Vendor Risk Engine](https://github.com/PrimelPJ/grc-vendor-risk-engine)**
-
-Vendor risk scoring platform for GRC workflows. Ingests vendor questionnaires, scores risk across security, privacy, and operational dimensions, and flags vendors that fall below policy thresholds.
-
-`Python` `Go` `PostgreSQL`
-
-</td>
-</tr>
 </table>
 
 <br>
