@@ -102,6 +102,80 @@ ICS/SCADA security monitoring lab. Simulated water treatment plant on a hand-bui
 
 <br>
 
+## Offensive Security
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**[Threshold / Attack Scripts](https://github.com/PrimelPJ/threshold/tree/main/scripts/attack)**
+
+Password spray and brute force tooling built for the AD defense lab. SMB spray with netexec stays under per-account lockout to trigger spray detection rules. Single-target brute force deliberately crosses the lockout threshold to test active response and GPO defenses.
+
+`Bash` `netexec` `SMB` `Kerberos`
+
+</td>
+<td width="50%" valign="top">
+
+**[Forge / Attack Scripts](https://github.com/PrimelPJ/forge/tree/main/scripts)**
+
+ICS/SCADA attack toolkit. Modbus reconnaissance scanner that enumerates unit IDs and function codes. Hijack scripts that drain tanks, overdose chemicals, trigger e-stops, and mask alarms. Modbus flooding for PLC denial of service.
+
+`Python` `Modbus TCP` `ICS/SCADA`
+
+</td>
+</tr>
+</table>
+
+<br>
+
+## GRC & Compliance
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**[VaultKey](https://github.com/PrimelPJ/vaultkey)**
+
+Automated secrets rotation engine on AWS. Rotates database credentials, API keys, and arbitrary secrets on a configurable schedule via Lambda and Secrets Manager. Drop-in compliance primitive for SOC 2 and ISO 27001 environments.
+
+`Python` `AWS Lambda` `Secrets Manager`
+
+</td>
+<td width="50%" valign="top">
+
+**[GRC Vendor Risk Engine](https://github.com/PrimelPJ/grc-vendor-risk-engine)**
+
+Vendor risk scoring platform. Ingests vendor questionnaires, scores risk across security, privacy, and operational dimensions, and flags vendors that fall below policy thresholds.
+
+`Python` `Go` `PostgreSQL`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[PlanGuard](https://github.com/PrimelPJ/planguard)**
+
+Terraform security scanner. Checks a `terraform plan` for security misconfigurations before you run `terraform apply`. Catches public S3 buckets, open security groups, unencrypted storage, and missing logging before they reach production.
+
+`Python` `Terraform` `CI/CD`
+
+</td>
+<td width="50%" valign="top">
+
+**[Watchpost](https://github.com/PrimelPJ/watchpost)**
+
+AWS account monitoring with auto-remediation. Watches CloudTrail for risky changes - public S3 buckets, open security groups, disabled logging - and fires Lambda functions to revert them automatically. EventBridge rules, SNS alerts, fully Terraformed.
+
+`Python` `AWS Lambda` `CloudTrail` `Terraform`
+
+</td>
+</tr>
+</table>
+
+<br>
+
 ## Infrastructure & Systems
 
 <table>
